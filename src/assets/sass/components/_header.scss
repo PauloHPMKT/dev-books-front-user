@@ -1,0 +1,13 @@
+.header {
+  @include align-elements(flex, space-between, center);
+  padding: 10px 280px;
+  border-bottom: 2px solid #009acc;
+
+  a {
+    @include align-elements(flex, center, center);
+
+    img {
+      width: 170px;
+    }
+  }
+}
