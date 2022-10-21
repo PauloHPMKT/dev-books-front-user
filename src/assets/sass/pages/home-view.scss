@@ -1,5 +1,5 @@
-.container-page {
-  background-color: red;
-  max-width: 1360px;
-  margin: 0 auto;
+.banner-home {
+  background-color: #009acc;
+  @include align-elements(flex, center, center);
+  height: 270px;
 }
