@@ -1,1 +1,8 @@
+//setup
+@import './mixins/mixin';
+
+//components archtecture
+@import './components/header';
+
+//pages archtecture
 @import './pages/home-view.scss';
