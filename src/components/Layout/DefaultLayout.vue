@@ -1,6 +1,6 @@
 <template>
   <div>
-    header da pagina
+    <Header />
     <main class="container-page">
       <router-view />
     </main>
@@ -8,7 +8,9 @@
 </template>
 
 <script>
+import Header from '../Header/Header.vue'
 export default {
+  components: { Header },
   name: 'DefaultLayout',
 }
 </script>
