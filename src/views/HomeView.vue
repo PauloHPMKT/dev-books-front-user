@@ -12,8 +12,13 @@
       <MainButton :data_title="btn_title"/>
     </div>
   </aside>
-  <section>
-    Ultimos Livros Adicionados
+  <section class="padding-size books-updated">
+    <h2>Ultimos Livros Adicionados</h2>
+    <div class="books-container">
+      <div v-for="book in books" :key="book._id" class="book-container">
+        <img :src="book.poster" :alt="book.title">
+      </div>
+    </div>
   </section>
   <section>
     Em alta
@@ -27,6 +32,7 @@
 </template>
 
 <script>
+import ServiceBooks from '../service-api/axios-request.books'
 import MainButton from '../components/Buttons/MainButton.vue'
 
 export default {
@@ -34,8 +40,21 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      btn_title: 'Cadastre-se, É de graça!'
+      btn_title: 'Cadastre-se, É de graça!',
+      books: [],
     }
+  },
+
+  methods: {
+    async renderAllBooks() {
+      await ServiceBooks.getAllBooks().then(res => {
+        this.books = res.data
+      })
+    }
+  },
+
+  mounted() {
+    this.renderAllBooks()
   }
 }
 </script>
