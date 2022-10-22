@@ -16,4 +16,8 @@
 
 .aside-container {
   @include align-elements(flex, unset, center);
+  border: 1px solid $primary-gray-scale;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
 }
