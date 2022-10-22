@@ -1,0 +1,12 @@
+.menu-navigation {
+  display: flex;
+  background-color: red;
+
+  li {
+    display: flex;
+
+    a {
+      margin: 0 10px;
+    }
+  }
+}
