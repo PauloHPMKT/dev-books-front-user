@@ -8,4 +8,13 @@
   border-radius: 7px;
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.295);
   cursor: pointer;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    background-color: $secondary-blue-scale;
+  }
+
+  &:focus {
+    background-color: $secondary-blue-scale;
+  }
 }
