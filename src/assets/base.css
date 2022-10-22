@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
 
 *,
 *::before,
@@ -9,7 +10,7 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  font-family: 'Roboto', 'Nunito', sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu,
   Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
