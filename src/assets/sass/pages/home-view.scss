@@ -6,4 +6,14 @@
   @include align-elements(flex, center, center);
   height: 270px;
   color: $main-white-color;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 400;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.623);
+  }
+}
+
+.aside-container {
+  @include align-elements(flex, unset, center);
 }
