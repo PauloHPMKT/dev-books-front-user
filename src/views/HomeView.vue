@@ -1,6 +1,6 @@
 <template>
   <div class="banner-home">
-    <h1>Home Page</h1>
+    <h1>Olá, vamos enriquecer nossa cultura hoje?</h1>
   </div>
   <section>
     Ultimos Livros Adicionados

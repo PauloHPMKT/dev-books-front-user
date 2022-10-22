@@ -1,5 +1,9 @@
 .banner-home {
-  background-color: #009acc;
+  background-image: url(img/dev-books-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   @include align-elements(flex, center, center);
   height: 270px;
+  color: $main-white-color;
 }
