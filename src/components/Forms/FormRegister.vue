@@ -1,7 +1,7 @@
 <template>
   <div class="spacing-form">
     <h2 class="title-form">Dados cadastrais</h2>
-    <form @submit.prevent="createNewUser">
+    <form @submit.prevent="$emit('createNewUser', user)">
       <div class="form-fields">
         <div>
           <label for="name">Nome e Sobrenome:</label>
@@ -69,12 +69,13 @@
 </template>
 
 <script>
-import axios from 'axios'
+//import axios from 'axios'
 import MainButton from '../Buttons/MainButton.vue'
 
 export default {
-  components: { MainButton },
   name: 'FormRegister',
+  components: { MainButton },
+  emits: ['createNewUser'],
   data() {
     return {
       btn_title: 'Cadastrar',
@@ -96,13 +97,13 @@ export default {
   },
 
   methods: {
-    async createNewUser() {
+    /*async createNewUser() {
       await axios.post('http://localhost:3005/api/user/register', {
         name: this.user.name,
         email: this.user.email,
         password: this.user.password, 
       }).then(res => console.log(res)) 
-    }
+    }*/
   }
 }
 </script>

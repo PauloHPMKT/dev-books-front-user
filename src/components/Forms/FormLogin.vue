@@ -1,7 +1,7 @@
 <template>
   <div class="spacing-form">
     <h2 class="title-form">Faça seu login</h2>
-    <form @submit.prevent="handleLogin">
+    <form @submit.prevent="$emit('submitLogin', user)">
       <div class="form-fields">
         <div>
           <label for="email">E-mail:</label>
@@ -28,8 +28,9 @@
 <script>
 import MainButton from '../Buttons/MainButton.vue'
 export default {
-  components: { MainButton },
   name: 'FormLogin',
+  components: { MainButton },
+  emits: ['submitLogin'],
   data() {
     return {
       btn_title: 'Login',
