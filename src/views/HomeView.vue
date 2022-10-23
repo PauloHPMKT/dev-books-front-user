@@ -9,7 +9,9 @@
       <p>Este é o lugar certo para quem ama uma boa leitura, adora opinar sobre as obras, ama enriquecer sua cultura e gosta de compartilhar com seus amigos. <span>Aqui você encontra os melhores livros, editoras e autores.</span></p>
     </div>
     <div class="btn-container">
-      <MainButton :data_title="btn_title"/>
+      <router-link to="/login">
+        <MainButton :data_title="btn_title"/>
+      </router-link>
     </div>
   </aside>
   <section class="padding-size books-updated">
@@ -50,6 +52,10 @@ export default {
       await ServiceBooks.getAllBooks().then(res => {
         this.books = res.data
       })
+    },
+
+    teste() {
+      alert('ok')
     }
   },
 
