@@ -1,47 +1,25 @@
 <template>
-  <div>
-    <form @submit.prevent="createNewUser">
+  <div class="login-view">
+    <div class="box-width">
+      Subbanner
+    </div>
+    <div class="box-width form-config">
       <div>
-        <input type="text" v-model="user.name" placeholder="digite seu nome de usuario" />
+        <!-- Aplicar transition entre os formularios -->
+        <label for="">Entrar</label>
+        <label for="">Cadastrar</label>
       </div>
-      <div>
-        <input type="text" v-model="user.email" placeholder="Digite seu e-mail" />
-      </div>
-      <div>
-        <input type="password" v-model="user.password" placeholder="digite sua senha">
-      </div>
-      <div>
-        <button type="submit">Cadastrar</button>
-      </div>
-    </form>
+      <!-- implementar formulario de login -->
+      <FormRegister />
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-
+import FormRegister from '../components/Forms/FormRegister.vue'
 export default {
+  components: { FormRegister },
   name: 'Login',
-  data() {
-    return {
-      users: [],
-      user: {
-        name: '',
-        email: '',
-        password: '',
-      }
-    }
-  },
-
-  methods: {
-    async createNewUser() {
-      await axios.post('http://localhost:3005/api/user/register', {
-        name: this.user.name,
-        email: this.user.email,
-        password: this.user.password, 
-      }).then(res => console.log(res)) 
-    }
-  }
 }
 </script>
 
