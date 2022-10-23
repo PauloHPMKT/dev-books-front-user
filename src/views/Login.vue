@@ -13,8 +13,14 @@
       </div>
       <div class="form-data-container">
         <div class="form-inner">
-          <FormLogin />
-          <FormRegister />
+          <FormLogin 
+            @submitLogin="handleSubmitLogin"
+            v-if="callFormLogin"
+          />
+          <FormRegister 
+            @createNewUser="handleCreateNewUser"
+            v-if="callFormRegister"
+          />
         </div>
       </div>
     </div>
@@ -25,8 +31,30 @@
 import FormLogin from '../components/Forms/FormLogin.vue'
 import FormRegister from '../components/Forms/FormRegister.vue'
 export default {
-  components: { FormRegister, FormLogin },
   name: 'Login',
+  components: { FormRegister, FormLogin },
+  data() {
+    return {
+      callFormLogin: true,
+      callFormRegister: false,
+    }
+  },
+
+  methods: {
+    formLogin() {
+      this.callFormRegister = false
+      this.callFormLogin = true
+    },
+
+    formRegister() {
+      this.callFormLogin = false
+      this.callFormRegister = true
+    },
+
+    handleCreateNewUser(user) {
+      console.log(user)
+    }
+  }
 }
 </script>
 

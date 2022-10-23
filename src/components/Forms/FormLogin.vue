@@ -4,9 +4,9 @@
     <form @submit.prevent="$emit('submitLogin', user)">
       <div class="form-fields">
         <div>
-          <label for="email">E-mail:</label>
+          <label for="emaillog">E-mail:</label>
           <div class="input-styles">
-            <input type="text" id="email" v-model="user.email" placeholder="meuemail@example.com" />
+            <input type="text" id="emaillog" v-model="user.email" placeholder="meuemail@example.com" />
           </div>
         </div>
         <div>
@@ -17,6 +17,7 @@
         </div>
         <div class="spacing-btn">
           <MainButton 
+            type="submit"
             :data_title="btn_title"
           />
         </div>

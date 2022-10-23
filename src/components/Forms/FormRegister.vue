@@ -26,9 +26,9 @@
           </div>
         </div>
         <div>
-          <label for="email">E-mail:</label>
+          <label for="emailreg">E-mail:</label>
           <div class="input-styles">
-            <input type="text" id="email" v-model="user.email" placeholder="seuemail@example.com" />
+            <input type="text" id="emailreg" v-model="user.email" placeholder="seuemail@example.com" />
           </div>
         </div>
         <div>
