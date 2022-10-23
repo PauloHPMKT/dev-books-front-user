@@ -49,6 +49,7 @@
         border: 1px solid $secondary-gray-scale;
         padding: 0 12px;
         margin: 3px 0 7px;
+        @include align-elements(flex, center, center);
       
         input, select {
           width: 100%;
@@ -56,6 +57,14 @@
           font-size: 15px;
           border: none;
           outline: none;
+        }
+
+        #password {
+          width: 97%;
+        }
+
+        svg {
+          cursor: pointer;
         }
       }
     

@@ -12,7 +12,11 @@
         <div>
           <label for="passwrod">Senha:</label>
           <div class="input-styles">
-            <input type="password" id="password" v-model="user.password" />
+            <input :type="inputType" id="password" v-model="user.password" />
+            <RevelingPassword 
+              @toggle="togglePassword"
+              :isPassword="isPasswordVisible"
+            />
           </div>
         </div>
         <div class="spacing-btn">
@@ -28,17 +32,31 @@
 
 <script>
 import MainButton from '../Buttons/MainButton.vue'
+import RevelingPassword from '../Buttons/RevelingPassword.vue'
 export default {
   name: 'FormLogin',
-  components: { MainButton },
+  components: { MainButton, RevelingPassword },
   emits: ['submitLogin'],
   data() {
     return {
       btn_title: 'Login',
+      inputType: 'password',
       user: {
         email: '',
         password: '',
       }
+    }
+  },
+
+  computed: {
+    isPasswordVisible() {
+      return this.inputType === 'text'  
+    }
+  },
+
+  methods: {
+    togglePassword() {
+      this.inputType = this.isPasswordVisible ? 'password' : 'text'
     }
   }
 }
