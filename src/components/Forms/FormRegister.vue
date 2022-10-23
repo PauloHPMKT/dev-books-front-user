@@ -55,7 +55,11 @@
         <div>
           <label for="">Crie sua senha:</label>
           <div class="input-styles">
-            <input type="password" v-model="user.password">
+            <input :type="inputType" v-model="user.password">
+            <RevelingPassword 
+              @toggle="togglePassword"
+              :isPassword="isPasswordVisible"
+            />
           </div>
         </div>
         <div class="spacing-btn">
@@ -70,16 +74,17 @@
 </template>
 
 <script>
-//import axios from 'axios'
+import RevelingPassword from '../Buttons/RevelingPassword.vue'
 import MainButton from '../Buttons/MainButton.vue'
 
 export default {
   name: 'FormRegister',
-  components: { MainButton },
+  components: { MainButton, RevelingPassword },
   emits: ['createNewUser'],
   data() {
     return {
       btn_title: 'Cadastrar',
+      inputType: 'password',
       user: {
         name: '',
         nickname: '',
@@ -97,14 +102,16 @@ export default {
     }
   },
 
+  computed: {
+    isPasswordVisible() {
+      return this.inputType === 'text'  
+    }
+  },
+
   methods: {
-    /*async createNewUser() {
-      await axios.post('http://localhost:3005/api/user/register', {
-        name: this.user.name,
-        email: this.user.email,
-        password: this.user.password, 
-      }).then(res => console.log(res)) 
-    }*/
+    togglePassword() {
+      this.inputType = this.isPasswordVisible ? 'password' : 'text'
+    }
   }
 }
 </script>
