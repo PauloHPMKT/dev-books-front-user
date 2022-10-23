@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="spacing-form">
     <h2 class="title-form">Dados cadastrais</h2>
     <form @submit.prevent="createNewUser">
       <div class="form-fields">

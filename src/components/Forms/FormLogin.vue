@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="spacing-form">
     <h2 class="title-form">Faça seu login</h2>
-    <form>
+    <form @submit.prevent="handleLogin">
       <div class="form-fields">
         <div>
           <label for="email">E-mail:</label>
