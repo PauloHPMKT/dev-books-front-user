@@ -1,6 +1,7 @@
 <template>
   <div class="spacing-form">
     <h2 class="title-form">Dados cadastrais</h2>
+    <p>Nos visita pela primeira vez? Cadastre-se em nossa plataforma e ajude nossa rede a crescer.</p>
     <form @submit.prevent="$emit('createNewUser', user)">
       <div class="form-fields">
         <div>
