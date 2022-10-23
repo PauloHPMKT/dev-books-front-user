@@ -7,8 +7,10 @@
 @import './components/nav-bar';
 @import './components/template.scss';
 @import './components/main-button';
+@import './components/forms';
 @import './components/footer';
 
 
 //pages archtecture
 @import './pages/home-view.scss';
+@import './pages/login.scss';
