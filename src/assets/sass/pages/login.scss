@@ -1,6 +1,30 @@
 .login-view {
   display: flex;
 
+  .banner-spacin {
+    margin: 50px 0;
+    padding-right: 15%;
+    @include align-elements(flex, center, flex-start);
+    flex-direction: column;
+
+    .page-title {
+      margin: 20px 0;
+
+      h2 {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
   .form-config {
     border-left: 1px solid $secondary-gray-scale;
     padding: 0 15% 0 30px;

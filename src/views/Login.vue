@@ -1,7 +1,13 @@
 <template>
   <div class="login-view">
-    <div class="box-width">
-      Subbanner
+    <div class="box-width ">
+      <div class="banner-spacin">
+        <div class="page-title">
+          <h2>Descubra um cantinho para chamar de seu!</h2>
+          <p> O DevBooks é a melhor rede social para leitores do Brasil e do mundo. O lugar perfeito para conhecer e compartilhar conhecimentos opniar sobre um bom livro, fazer amizades e compartilhar o seu amor pela leitura.</p>
+        </div>
+        <img src="img/man-reading.jpg" alt="banner leitor">
+      </div>
     </div>
     <div class="box-width form-config">
       <div class="slide-controls">
