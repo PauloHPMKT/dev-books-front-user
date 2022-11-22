@@ -22,7 +22,12 @@ const router = createRouter({
           path: 'livros',
           name: 'Livros',
           component: () => import('@/views/BooksView.vue'),
-        }
+        },
+        {
+          path: 'app/usuario',
+          name: 'Dashboard',
+          component: () => import('@/views/user-views/Dashboard.vue'),
+        },
       ]
     },
     {
