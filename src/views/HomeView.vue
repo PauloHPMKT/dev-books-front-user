@@ -15,21 +15,50 @@
     </div>
   </aside>
   <section class="padding-size books-updated">
-    <h2>Ultimos Livros Adicionados</h2>
+    <header class="header-add">
+      <h2>Ultimos Livros Adicionados</h2>
+      <span>Ver mais</span>
+    </header>
     <div class="books-container">
       <div v-for="book in books" :key="book._id" class="book-container">
         <img :src="book.poster" :alt="book.title">
       </div>
     </div>
   </section>
-  <section>
-    Em alta
+  <section class="padding-size books-updated">
+    <header class="header-add">
+      <h2>Livros em alta</h2>
+      <span>Ver mais</span>
+    </header>
+    <div class="books-container">
+      <div v-for="book in books" :key="book._id" class="book-container">
+        <img :src="book.poster" :alt="book.title">
+      </div>
+    </div>
+  </section>
+  <section class="padding-size books-updated">
+    <header class="header-add">
+      <h2>Editoras</h2>
+      <span>Ver mais</span>
+    </header>
+    <div class="books-container">
+      <div class="publishing-container">
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+        <div class="publishing-list">teste</div>
+      </div>
+    </div>
   </section>
   <div>
-    editoras
-  </div>
-  <div>
-    Destaques
+    Indicação DevBooks
   </div>
 </template>
 
@@ -64,5 +93,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
