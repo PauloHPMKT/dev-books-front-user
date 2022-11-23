@@ -1,5 +1,5 @@
 .banner-home {
-  background-image: url(img/dev-books-banner.jpg);
+  background-image: url('/img/dev-books-banner.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -39,9 +39,26 @@
 .books-updated {
   color: $primary-gray-scale;
 
-  h2 {
-    font-weight: 400;
+  .header-add  {
+    padding: 0 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-weight: 400;
+    }
+
+    span {
+      background-color: #ffa600;
+      padding: 3px 5px;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 3px;
+      cursor: pointer;
+    }
   }
+
 
   .books-container {
     display: flex;
@@ -55,5 +72,22 @@
         height: 100%;
       }
     }
+
+    .publishing-container {
+      width: 100%;
+      padding: 1.5%;
+      display: flex;
+      justify-content: space-between;
+  
+      .publishing-list {
+        width: 100px;
+        height: 100px;
+        background-color: #c4c4c4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
+
 }

@@ -14,6 +14,7 @@
       </router-link>
     </div>
   </aside>
+  <!--transformar sections em componentes-->
   <section class="padding-size books-updated">
     <header class="header-add">
       <h2>Ultimos Livros Adicionados</h2>

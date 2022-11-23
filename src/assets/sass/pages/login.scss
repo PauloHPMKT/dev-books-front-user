@@ -31,11 +31,11 @@
     margin: 50px 0;
     display: flex;
     flex-direction: column;
-
+    
     .slide-controls {
-      margin: 20px 0 20px 10px;
+      margin: 10px 0 35px 10px;
       position: relative;
-      @include align-elements(flex, space-between, unset);
+      @include align-elements(flex, center, center);
       height: 40px;
       width: 100%;
       overflow: hidden;
@@ -52,6 +52,10 @@
         transition: all .6s ease;
         font-size: 30px;
       }
+
+      label {
+        padding: 0 30px;
+      }
       
       label.register {
         color: $primary-blue-scale;
@@ -64,7 +68,7 @@
       .slider-tab {
         position: absolute;
         height: 100%;
-        width: 40%;
+        width: 20%;
         left: 0;
         z-index: 0;
         border-bottom: 2px solid $primary-blue-scale;
@@ -72,11 +76,12 @@
       }
 
       #register:checked~.slider-tab {
-        left: 71%;
+        left: 50%;
+        width: 32%;
       }
 
       #enter:checked~.slider-tab {
-        left: -22%;
+        left: 19%;
       }
 
       #enter:checked~label.enter,
